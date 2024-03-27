@@ -320,7 +320,7 @@ form > div button:hover {
 }
 .hebergements-ligne {
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
@@ -436,15 +436,15 @@ form > div button:hover {
     height: 439px;
 }
 .activites-ligne {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
-    width: 811px;
     height: 207.25px;
     padding-top: 30px;
     margin-left: 30px;
+    margin-right: 30px;
 }
 .activites-cards img {
     width: 297.5px;
