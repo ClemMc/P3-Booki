@@ -117,7 +117,8 @@ a {
     padding: 0px;
     gap: 35px;
     isolation: isolate;
-    width: 1340px;
+    width: 100%;
+    max-width: 1340px;
     height: 281px;
     }
 .headline {
@@ -126,7 +127,8 @@ a {
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-    width: 1340px;
+    width: 100%;
+    max-width: 1340px;
     height: 53px;
 }
 .titre {
@@ -188,16 +190,20 @@ form > div button:hover {
     background-color: #004fad;
 }
 
-
-
+.filter-label-container {
+    width: 100%;
+    font-weight: bold;
+}
 .filterbar {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
-    padding: 0px;
     gap: 15px;
-    width: 758px;
+    width: 100%;
+    max-width: 758px;
     height: 50px;
+    margin-left: 60px;
+    margin-top: -85px;
 }
 .filter1 {
     display: flex;
@@ -470,6 +476,7 @@ form > div button:hover {
 .activites .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+    margin-left: 30px;
 }
 /***** Footer******/
 
@@ -509,13 +516,24 @@ form > div button:hover {
         width: 100%;
         height: 79px;
     }
-
+    .info {
+        width: 100%;
+        max-width: 924px;
+    }
+    .filter-label-container {
+        margin-top: -10px;
+    }
+    .filterbar {
+        margin-top: -30px;
+        margin-left: 0px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
     .hebergements {
         width: 100%;
+        margin-top: 50px;
     }
 
     .populaires {
@@ -584,7 +602,7 @@ form > div button:hover {
         padding-bottom: 10px;
     }
     form {
-        width: 25%;
+        width: 50%;
     }
     form > div {
         margin-top: 80px;
@@ -602,42 +620,27 @@ form > div button:hover {
         display: inline-block; 
     }
     .filterbar {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 40px;
-        margin-bottom: 100px;
+        grid-row-gap: 10px;
+        margin-top: -30px;
+        margin-left: 0px;
     }
-    .box1 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        font-weight: 700;
+    .filter1,
+    .filter2,
+    .filter3,
+    .filter4 {
+        width: 75%;
     }
-    .box2 {
-        grid-column-start: 1;
-        grid-row-start: 2;
-    }
-    .box3 {
-        grid-column-start: 2;
-        grid-row-start: 2;
-    }
-    .box4 {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-    }
-    .box5 {
-        grid-column-start: 2;
-        grid-row-start: 3;
-    }
+
     .infobar {
         width: 335px;
         height: 38px;
-        margin-bottom: 35px;
+        margin-top: 60px;
     }
     .populaires {
         order: 1;
-        width: 100%;
+        width: 50%;
         margin-top: 170px;
     }
 
@@ -664,7 +667,8 @@ form > div button:hover {
 
     .hebergements {
         order: 2;
-        width: 100%;
+        width: 50%;
+        background-color: transparent !important;
     }
     .hebergements-ligne {
         display: grid;
@@ -676,6 +680,12 @@ form > div button:hover {
         height: 207.25px;
         margin-top: 40px;
     }
+    .afficher {
+        padding-top: 1300px;
+    }
+    .activites-cards .card {
+        width: 42%;
+    }
     .activites-ligne {
         display: grid;
         grid-template-columns: 1fr;
@@ -683,5 +693,10 @@ form > div button:hover {
     }
     .footer-section {
         margin-top: 1100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+
     }
 }
