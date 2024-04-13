@@ -474,8 +474,10 @@ footer > section > div {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
-
-    .header {
+    .main-container {
+        padding: 0px;
+    }
+    header {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -518,6 +520,7 @@ footer > section > div {
         opacity: 1;
     }
     .info {
+        padding-left: 20px;
         gap: 10px;
         margin-top: 0;
     }
@@ -560,6 +563,9 @@ footer > section > div {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -582,7 +588,7 @@ footer > section > div {
         grid-template-columns: 1fr;
         align-items: flex-start;
     }
-    .footer-section {
+    footer > section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
