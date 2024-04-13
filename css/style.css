@@ -482,12 +482,12 @@ footer > section > div {
         flex-direction: column;
         align-items: center;
     }
-    .nav {
+    header > nav > ul {
         position: relative;
         right: 25px;
         padding: 0;
     }
-    .border {
+    header > nav > ul > li {
         position: relative;
     }
     .border::before {
@@ -504,7 +504,7 @@ footer > section > div {
     .border:hover::before {
         opacity: 0;
     }
-    .border::after {
+    header > nav > ul > li::after {
         content: '';
         position: absolute;
         top: 30px;
