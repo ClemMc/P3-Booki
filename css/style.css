@@ -67,43 +67,34 @@ header {
 }
 header > a > img {
     width: 61.09px;
-    height: 19px;
-    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-header > nav > ul {
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav > div {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     gap: 68px;
-    position: relative;
+    padding: 0 25px;
 }
 
-header > nav > ul > li:hover {
+nav > div > a {
+    border-block-start: 2px solid #fff;
+    padding-top: 16px;
+    gap: 68px;
+}
+
+nav > div > a:hover {
     color: #0065FC;
-    height: 4px;
-    
+    border-block-start: 2px solid #0065FC;
 }
-
-header > nav > ul > li {
-    position: relative;
-}
-
-header > nav > ul > li::after {
-    content: '';
-    position: absolute;
-    bottom: 18px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #0065FC;
-    opacity: 0;
-}
-
-header > nav > ul > li:hover::after {
-    opacity: 1;
-}
-
 
 /****** Info ********/
 .info {
@@ -123,27 +114,30 @@ header > nav > ul > li:hover::after {
 h1 {
     margin-bottom: 0;
 }
-form {
+.recherche {
     display: flex;
     justify-content: center;
 }
 .fa-location-dot {
-    width: 50px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
     color: #000000;
 }
-form > div {
+form {
+    justify-content: center;
     display: flex;
     align-items: center;
     border: 1px solid #F2F2F2;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #F2F2F2;
 }
 
 
-form > div input[type="search"] {
+form input[type="search"] {
     flex: 1;
     border: none;
     padding: 20px;
@@ -151,11 +145,11 @@ form > div input[type="search"] {
     font-weight: 700;
     text-align: center;
 }
-form > div input[type="search"]::placeholder {
+form input[type="search"]::placeholder {
     color: #000000;
 }
 
-form > div button {
+form button {
     background-color: #0065FC;
     color: #fff;
     border: none;
@@ -174,7 +168,7 @@ form > div button {
 .fa-magnifying-glass {
     color: #F2F2F2;
 }
-form > div button:hover {
+form button:hover {
     background-color: #004fad;
 }
 
@@ -475,59 +469,45 @@ footer > section > div {
 @media (max-width: 767.98px) {
     /* ... */
     .main-container {
-        padding: 0px;
+        padding: 0;
     }
     header {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
-    header > nav > ul {
-        position: relative;
-        right: 25px;
+    nav > div {
+        display: grid;
+        justify-content: center;
+        width: 100%;
         padding: 0;
+        gap: 0;
+        grid-template-columns: 50% 50%;
     }
-    header > nav > ul > li {
-        position: relative;
+
+    nav > div > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: none;
+        border-bottom: 2px solid #F2F2F2;
+        padding-bottom: 15px;
     }
-    .border::before {
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #F2F2F2;
-        opacity: 1;
-        transition: opacity 0.2s ease;
+    nav > div > a:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
     }
-    .border:hover::before {
-        opacity: 0;
-    }
-    header > nav > ul > li::after {
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 0;
-        margin-left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #0065FC;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-    }
-    .border:hover::after {
-        opacity: 1;
-    }
+
     .info {
         padding-left: 20px;
         gap: 10px;
         margin-top: 0;
     }
-    form > div button {
+    form button {
         border-bottom-left-radius: 15px;
         border-top-left-radius: 15px;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
     .button-text {
         display: none;
