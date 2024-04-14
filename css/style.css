@@ -343,7 +343,8 @@ form button:hover {
 
 .activites-title {
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .activites-cards .card {
