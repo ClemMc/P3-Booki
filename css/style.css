@@ -73,8 +73,7 @@ header > a > img {
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
     width: 100%;
 }
 
